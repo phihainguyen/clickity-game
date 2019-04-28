@@ -1,0 +1,13 @@
+.navbar {
+  height: 15vh;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.288);
+  color: aliceblue;
+}
+.par1cont {
+  display: flex;
+  justify-content: space-around;
+}

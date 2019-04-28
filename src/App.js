@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import ImageCard from "./components/imagecards";
 import Wrapper from "./components/Wrapper";
-import Images from "./images.json";
-// import "./App.css";
+import heroes from "./images.json";
+import Header from "./components/header";
+import "./App.css";
 
 function shuffleArray(array) {
   let i = array.length - 1;
@@ -14,30 +15,55 @@ function shuffleArray(array) {
   }
   return array;
 }
-class App extends Component {
+class Hero extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    Images,
+    heroes,
     clicked: false,
     score: 0,
     losses: 0,
-    guesses: 0
+    guesses: [],
+    maxScore: 0
   };
+  handleHeroClick = heroId => {
+    const newState = { ...this.state };
+    if (newState.guesses.includes(heroId)) {
+      newState.losses = newState.losses + 1;
+      newState.score = 0;
+      newState.guesses = [];
+    } else {
+      newState.score = newState.score + 1;
+      newState.guesses.push(heroId);
+    }
+    newState.heroes = shuffleArray(newState.heroes);
+    if (newState.score > newState.maxScore) {
+      newState.maxScore = newState.score;
+    }
 
+    this.setState(newState);
+  };
   render() {
-    const shuffledImages = shuffleArray(this.state.Images);
+    const shuffledImages = shuffleArray(this.state.heroes);
     return (
-      <div>
-        <div>
-          <h1>Clicky Game</h1>
-        </div>
+      <div className="body">
+        <Header
+          score={this.state.score}
+          losses={this.state.losses}
+          maxScore={this.state.maxScore}
+        />
         <Wrapper>
-          {shuffledImages.map((element, i) => (
-            <ImageCard key={i} name={element.name} image={element.image} />
+          {shuffledImages.map(hero => (
+            <ImageCard
+              key={hero.id}
+              id={hero.id}
+              handleHeroClick={this.handleHeroClick}
+              name={hero.name}
+              image={hero.image}
+            />
           ))}
         </Wrapper>
       </div>
     );
   }
 }
-export default App;
+export default Hero;

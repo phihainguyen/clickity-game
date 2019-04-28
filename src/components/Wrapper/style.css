@@ -1,13 +1,13 @@
 .wrapper {
   /* padding-top: 50px; */
-  background: #eceff1;
-  height: 80%;
-  width: 80%;
+  background: #ebedee;
+  height: 80vh;
+  width: 140vh;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-
-  /* justify-content: space-around; */
   justify-content: space-around;
-  align-content: space-around;
-  overflow: auto;
+  /* align-content: space-around; */
+  overflow: hidden;
+  box-shadow: 0 3px 6px #999, 0 3px 6px rgb(56, 48, 48);
 }
