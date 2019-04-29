@@ -1,4 +1,4 @@
 .body {
-  background: rgb(206, 40, 40);
+  background: linear-gradient(rgb(146, 153, 46) 30%, rgb(31, 30, 26) 90%);
   overflow: hidden;
 }
