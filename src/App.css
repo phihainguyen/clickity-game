@@ -1,4 +1,5 @@
 .body {
-  background: linear-gradient(rgb(146, 153, 46) 30%, rgb(31, 30, 26) 90%);
+  /* background: linear-gradient(rgb(146, 153, 46) 30%, rgb(31, 30, 26) 90%); */
+  background-image: url(https://cdn.thinglink.me/api/image/890168899213983745/1240/10/scaletowidth);
   overflow: hidden;
 }
