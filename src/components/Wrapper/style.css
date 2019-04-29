@@ -9,5 +9,5 @@
   justify-content: space-around;
   /* align-content: space-around; */
   overflow: hidden;
-  box-shadow: 0 3px 6px #999, 0 3px 6px rgb(56, 48, 48);
+  box-shadow: 0 10px 12px rgb(250, 244, 244), 0 10px 12px rgb(209, 192, 192);
 }

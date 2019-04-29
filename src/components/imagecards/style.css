@@ -29,34 +29,11 @@ img {
   height: 150px;
 }
 
-img {
-  font-family: arial;
-}
-img * {
-  transition: all 0.1s ease-in;
-}
-img .img-container {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 50%;
-  display: block;
-  float: left;
-  background: #ccc;
-  text-align: center;
-  line-height: 30px;
-  margin: 0 2px;
-}
-img .img-container.sibling {
-  transform: scale(1.3);
-}
-img .img-container.current {
-  transform: scale(1.8);
-  z-index: 5;
-  position: relative;
-}
-img .img-container:hover {
-  background: rgb(39, 31, 31);
+img:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 
 .card > .content {
