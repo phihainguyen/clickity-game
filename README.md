@@ -1,3 +1,6 @@
+A simple, fun, memory game using React, Javascript, HTML, CSS and Heroku, which challenges a user to try to click on each picture only once before they click any one twice to win the game, else they will lose and have to start over!
+![](clickity.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
